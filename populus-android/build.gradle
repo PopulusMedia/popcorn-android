@@ -46,7 +46,6 @@ publishing {
             groupId = 'com.media.populus'
             artifactId = 'populus-android'
             version = '0.0.1'
-            from components.java
         }
     }
 
