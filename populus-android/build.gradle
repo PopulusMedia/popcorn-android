@@ -45,7 +45,9 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.media.populus'
             artifactId = 'populus-android'
-            version = '0.0.7'
+            version = '0.0.9'
+            artifact("$buildDir/outputs/aar/${artifactId}-${version}.aar")
+
         }
     }
 
