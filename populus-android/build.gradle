@@ -52,7 +52,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = "https://github.com/PopulusMedia/popcorn-android"
+            url = "https://maven.pkg.github.com/PopulusMedia/popcorn-android"
             credentials {
                 username = "pbhosale87" //System.getenv("GITHUB_ACTOR")
                 password = "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"// System.getenv("GITHUB_TOKEN")
