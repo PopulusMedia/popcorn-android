@@ -20,13 +20,14 @@ jobs:
       - uses: actions/setup-java@v2
         with:
           java-version: '11'
-          distribution: 'adopt'
-      - uses: gradle/gradle-build-action@v2
-        with:
-          arguments: build
-          build-root-directory: outputs/aar
+          distribution: 'adopt's
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
+      - name: Build project
+        uses: gradle/gradle-build-action@v2
+          with:
+            arguments: build
+            build-root-directory: build/outputs/aar
       - name: Publish package
         uses: gradle/gradle-build-action@937999e9cc2425eddc7fd62d1053baf041147db7
         with:
