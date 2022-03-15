@@ -40,24 +40,28 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
 
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = 'com.media.populus'
-            artifactId = 'populus-android'
-            version = '0.1.8'
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.media.populus'
+                artifactId = 'populus-android'
+                version = '0.1.8'
+                from components.release
+                // artifact("$buildDir/outputs/aar/${artifactId}-${version}.aar")
 
-            // artifact("$buildDir/outputs/aar/${artifactId}-${version}.aar")
+            }
+
         }
-    }
-
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = "https://maven.pkg.github.com/PopulusMedia/popcorn-android"
-            credentials {
-                username = "pbhosale87" //System.getenv("GITHUB_ACTOR")
-                password = "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"// System.getenv("GITHUB_TOKEN")
+        repositories {
+            maven {
+                name = "GitHubPackages"
+                url = "https://maven.pkg.github.com/PopulusMedia/popcorn-android"
+                credentials {
+                    username = "pbhosale87" //System.getenv("GITHUB_ACTOR")
+                    password = "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"
+// System.getenv("GITHUB_TOKEN")
+                }
             }
         }
     }
