@@ -1,4 +1,4 @@
-package com.media.populus;
+package com.media.app;
 
 import android.os.Bundle
 import android.webkit.WebView
