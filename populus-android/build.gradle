@@ -46,7 +46,7 @@ afterEvaluate {
             release(MavenPublication) {
                 groupId = 'com.media.populus'
                 artifactId = 'populus-android'
-                version = '0.1.8'
+                version = '0.2.0'
                 from components.release
                 // artifact("$buildDir/outputs/aar/${artifactId}-${version}.aar")
 
