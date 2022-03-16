@@ -46,10 +46,10 @@ afterEvaluate {
             bar(MavenPublication) {
                 groupId = 'com.media.populus'
                 artifactId = 'populus-android'
-                version = '0.2.1'
+                version = '0.2.2'
                 //from components.release
                 // artifact("$buildDir/outputs/aar/${artifactId}-${version}.aar")
-                artifact("$buildDir/outputs/aar/populus-android-0.2.1.aar")
+                //artifact("$buildDir/outputs/aar/populus-android-0.2.1.aar")
             }
 
         }
