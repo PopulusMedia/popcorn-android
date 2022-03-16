@@ -43,21 +43,13 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-            bar(MavenPublication) {
-                groupId = 'com.media.populus'
-                artifactId = 'populus-android'
-                version = '0.2.2'
-                //from components.release
-                // artifact("$buildDir/outputs/aar/${artifactId}-${version}.aar")
-                //artifact("$buildDir/outputs/aar/populus-android-0.2.1.aar")
+            release(MavenPublication) {
+//            groupId = 'com.media.populus'
+//            artifactId = 'populus-android'
+//            version = '0.2.2'
+                from components.release
             }
-
         }
- //       publications {
-//            gpr(MavenPublication) {
-//                from components.java
-//            }
-//        }
         repositories {
             maven {
                 name = "GitHubPackages"
@@ -70,3 +62,31 @@ afterEvaluate {
         }
     }
 }
+//
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            release(MavenPublication) {
+//                groupId = 'com.media.populus'
+//                artifactId = 'populus-android'
+//                version = '0.2.2'
+//                from components.release
+//                from components.java
+//                // artifact("$buildDir/outputs/aar/${artifactId}-${version}.aar")
+//                //artifact("$buildDir/outputs/aar/populus-android-0.2.1.aar")
+//            }
+//
+//        }
+//
+//       repositories {
+//            maven {
+//                name = "GitHubPackages"
+//                url = "https://maven.pkg.github.com/PopulusMedia/popcorn-android"
+//                credentials {
+//                    username = System.getenv("GITHUB_ACTOR")
+//                    password = System.getenv("GITHUB_TOKEN")
+//                }
+//            }
+//        }
+//    }
+//}
