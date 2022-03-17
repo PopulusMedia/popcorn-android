@@ -1,5 +1,5 @@
 # popcorn-anadroid
-## Android library to Integrate with [Populue media](https://populusmedia.github.io/docs/)
+## Android library to Integrate with [Populus media](https://populusmedia.github.io/docs/)
 
 ### Usage:
 Add below section to your build.gradle file
