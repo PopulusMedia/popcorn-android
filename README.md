@@ -1,4 +1,4 @@
-# popcorn-anadroid
+# popcorn-android
 ## Android library to Integrate with [Populus media](https://populusmedia.github.io/docs/)
 
 ### Usage:
