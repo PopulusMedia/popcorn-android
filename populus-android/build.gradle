@@ -50,7 +50,7 @@ publishing {
         release(MavenPublication) {
         groupId = 'com.media.populus'
         artifactId = 'populus-android'
-        version = '0.2.3'
+        version = '0.2.5'
             afterEvaluate {
                 from components.release
             }
