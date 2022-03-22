@@ -5,6 +5,7 @@ plugins {
 
 android {
     compileSdk 32
+    namespace = 'com.media.populus'
 
     defaultConfig {
         applicationId "com.media.populus"

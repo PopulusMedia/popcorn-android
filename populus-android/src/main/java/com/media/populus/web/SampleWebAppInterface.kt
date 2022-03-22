@@ -11,6 +11,9 @@ class SampleWebAppInterface(private val mContext: Context): PopulusWebInterface 
      *  init
      *  noAds
      *  error
+     *  rendered
+     *  done
+     *  viewed
      */
     @JavascriptInterface
     override fun handleEvent(event: String) {

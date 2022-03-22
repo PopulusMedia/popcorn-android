@@ -3,6 +3,7 @@ package com.media.app;
 import android.os.Bundle
 import android.webkit.WebView
 import androidx.appcompat.app.AppCompatActivity
+import com.media.populus.R
 import com.media.populus.web.PopulusMedia
 import com.media.populus.web.SampleWebAppInterface
 import java.util.*

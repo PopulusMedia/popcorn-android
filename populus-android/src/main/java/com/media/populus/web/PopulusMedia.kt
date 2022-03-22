@@ -64,11 +64,11 @@ class PopulusMedia  private constructor (
             webSettings.javaScriptEnabled = true
 
             val url = BASE_URL+"/popcorn/v4/embed.html?" + getQueryParamsString()
-            val data_html = "<iframe src=\""+ url+ "\"></iframe>"
-            println(data_html)
+            val dataHtml = "<iframe src=\""+ url+ "\"></iframe>"
+            println(dataHtml)
             webView.loadDataWithBaseURL(
                 BASE_URL,
-                data_html,
+                dataHtml,
                 "text/html",
                 "UTF-8",
                 null
@@ -125,9 +125,10 @@ class PopulusMedia  private constructor (
         }
 
         var result: String= queryParams.toString()
-        if(result.get(result.length-1 ) == '&') {
+        if(result.isNotEmpty() && result[result.length-1] == '&') {
             result = result.dropLast(1)
         }
+
         return result
     }
 
