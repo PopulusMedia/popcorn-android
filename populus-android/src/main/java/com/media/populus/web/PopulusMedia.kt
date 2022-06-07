@@ -17,7 +17,8 @@ class PopulusMedia  private constructor (
     val inventoryClass: String?,
     val reason: String?,
     val keywords: String?,
-    val icdx: String?
+    val icdx: String?,
+    val zone: String?
 ) {
     val caller: String? = "android"
     val BASE_URL = "https://cdn.populus-media.net"
@@ -36,7 +37,8 @@ class PopulusMedia  private constructor (
         var inventoryClass: String? = null,
         var reason: String? = null,
         var keywords: String? = null,
-        var icdx: String? = null
+        var icdx: String? = null,
+        var zone: String? = null
     ) {
 
         fun network(network: String) = apply { this.network = network }
@@ -53,8 +55,9 @@ class PopulusMedia  private constructor (
         fun reason(reason: String) = apply { this.reason = reason }
         fun keywords(keywords: String) = apply { this.keywords = keywords }
         fun icdx(icdx: String) = apply { this.icdx = icdx }
+        fun zone(zone: String) = apply { this.zone = zone }
 
-        fun build() = PopulusMedia(network, partner, partnerSubAcct, visitId, anonId, suppress, width, height, aspectRatio, visitStage, inventoryClass, reason, keywords, icdx)
+        fun build() = PopulusMedia(network, partner, partnerSubAcct, visitId, anonId, suppress, width, height, aspectRatio, visitStage, inventoryClass, reason, keywords, icdx, zone)
     }
 
     public fun configureWebView(webView: WebView?) {
@@ -122,6 +125,9 @@ class PopulusMedia  private constructor (
         }
         if(this.icdx != null) {
             queryParams.append("icdx").append("=").append(this.icdx).append("&")
+        }
+        if(this.zone != null) {
+            queryParams.append("zone").append("=").append(this.zone).append("&")
         }
 
         var result: String= queryParams.toString()

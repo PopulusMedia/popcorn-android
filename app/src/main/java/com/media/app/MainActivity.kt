@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
             .width("800")
             .height("400")
             .keywords("lupus")
+            .zone("dev")
             .build()
 
         pm.configureWebView(webView)
