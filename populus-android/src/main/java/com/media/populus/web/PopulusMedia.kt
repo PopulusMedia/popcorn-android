@@ -67,15 +67,8 @@ class PopulusMedia  private constructor (
             webSettings.javaScriptEnabled = true
 
             val url = BASE_URL+"/popcorn/v4/embed.html?" + getQueryParamsString()
-            val dataHtml = "<iframe src=\""+ url+ "\"></iframe>"
-            println(dataHtml)
-            webView.loadDataWithBaseURL(
-                BASE_URL,
-                dataHtml,
-                "text/html",
-                "UTF-8",
-                null
-            );
+            println(url)
+            webView.loadUrl(url)
         }
     }
 

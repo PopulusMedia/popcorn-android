@@ -28,9 +28,9 @@ class MainActivity : AppCompatActivity() {
             .partner("test")
             .visitId(UUID.randomUUID().toString())
             //.visitId("1234")
-            .width("800")
-            .height("400")
-            .keywords("lupus")
+            .width("300")
+            .height("250")
+            .keywords("HIV")
             .zone("dev")
             .build()
 

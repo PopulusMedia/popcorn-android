@@ -7,17 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextClock
-        android:id="@+id/clock"
-        android:layout_width="400dp"
-        android:layout_height="310dp"
-        tools:ignore="MissingConstraints" />
+<!--    <TextClock-->
+<!--        android:id="@+id/clock"-->
+<!--        android:layout_width="400dp"-->
+<!--        android:layout_height="310dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
     <WebView
         android:id="@+id/web_View"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:layout_constraintBottom_toBottomOf="@+id/clock" />
-    />
+        android:layout_width="500dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"  />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
