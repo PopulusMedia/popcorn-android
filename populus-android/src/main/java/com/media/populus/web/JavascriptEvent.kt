@@ -1,6 +1,6 @@
 package com.media.populus.web
 
-enum class JavascriptEvent(event: String) {
+enum class JavascriptEvent(val event: String) {
     ERROR("error"),
     NO_ADS("noAds"),
     INIT("init"),

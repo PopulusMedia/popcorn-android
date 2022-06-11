@@ -18,8 +18,9 @@ class SampleWebAppInterface(private val mContext: Context): PopulusWebInterface 
     @JavascriptInterface
     override fun handleEvent(event: String) {
         println("Javascript event: $event")
-        if(event!=null && (JavascriptEvent.NO_ADS.name.equals(event)
-                    || JavascriptEvent.ERROR.name.equals(event)) ) {
+
+        if(event!=null && (JavascriptEvent.NO_ADS.event.equals(event)
+                    || JavascriptEvent.ERROR.event.equals(event)) ) {
             hideWebView()
         }
     }
